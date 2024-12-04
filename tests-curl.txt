@@ -1,0 +1,53 @@
+
+-- test 1: cart creation, update and delete
+
+# get all carts (none returned)
+curl.exe localhost:8080/api/carts
+
+# create empty cart (cart 1 is returned)
+curl.exe -X POST localhost:8080/api/carts
+
+# get cart 1 (cart 1 is returned)
+curl.exe localhost:8080/api/carts/1
+
+# add 2 products to cart 1 (cart 1 is returned with 2 products)
+curl.exe -X PUT localhost:8080/api/carts/1 -H "Content-type:application/json" -d "[{\"id\": 1011, \"desc\": \"martillo\", \"amount\": 1}, {\"id\": 1022, \"desc\": \"tornillos\", \"amount\": 100}]"
+
+# get all carts (one cart returned)
+curl.exe localhost:8080/api/carts
+
+# delete cart 1 (no content returned)
+curl.exe -X DELETE localhost:8080/api/carts/1
+
+# get all carts (none returned)
+curl.exe localhost:8080/api/carts
+
+
+-- test 2: cart selection, update and delete for non existing cart 
+
+# get cart 2 (not found returned)
+curl.exe localhost:8080/api/carts/2
+
+# add 2 products to cart 2 (not found returned)
+curl.exe -X PUT localhost:8080/api/carts/2 -H "Content-type:application/json" -d "[{\"id\": 1011, \"desc\": \"martillo\", \"amount\": 1}, {\"id\": 1022, \"desc\": \"tornillos\", \"amount\": 100}]"
+
+# delete cart 2 (not found returned)
+curl.exe -X DELETE localhost:8080/api/carts/2
+
+
+-- test 3: cart creation, update and automatic delete after 10 minutes of inactivity
+
+# create empty cart (cart 1 is returned)
+curl.exe -X POST localhost:8080/api/carts
+
+# add 2 products to cart 1 (cart 1 is returned with 2 products)
+curl.exe -X PUT localhost:8080/api/carts/1 -H "Content-type:application/json" -d "[{\"id\": 1011, \"desc\": \"martillo\", \"amount\": 1}, {\"id\": 1022, \"desc\": \"tornillos\", \"amount\": 100}]"
+
+# get all carts (one cart returned)
+curl.exe localhost:8080/api/carts
+
+after 10 minutes of inactiviy ...
+
+# get all carts (none returned)
+curl.exe localhost:8080/api/carts
+
