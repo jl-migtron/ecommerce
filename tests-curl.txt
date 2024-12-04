@@ -1,4 +1,11 @@
 
+-- launch the app from command line
+
+> mvnw spring-boot::run
+
+
+-- open new terminal for tests ...
+
 -- test 1: cart creation, update and delete
 
 # get all carts (none returned)
