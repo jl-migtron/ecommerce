@@ -1,0 +1,39 @@
+2024-12-04T13:59:45.285+01:00  INFO 18360 --- [ecommerce] [main] c.e.ecommerce.EcommerceApplication       : Starting EcommerceApplication using Java 17.0.13 with PID 18360 (C:\Users\bea\DEV\ecommerce\target\classes started by bea in C:\Users\bea\DEV\ecommerce)
+2024-12-04T13:59:45.287+01:00 DEBUG 18360 --- [ecommerce] [main] c.e.ecommerce.EcommerceApplication       : Running with Spring Boot v3.3.5, Spring v6.1.14
+2024-12-04T13:59:45.288+01:00  INFO 18360 --- [ecommerce] [main] c.e.ecommerce.EcommerceApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-12-04T13:59:46.134+01:00  INFO 18360 --- [ecommerce] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-04T13:59:46.149+01:00  INFO 18360 --- [ecommerce] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-04T13:59:46.149+01:00  INFO 18360 --- [ecommerce] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-12-04T13:59:46.204+01:00  INFO 18360 --- [ecommerce] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-04T13:59:46.205+01:00  INFO 18360 --- [ecommerce] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 860 ms
+2024-12-04T13:59:46.525+01:00  INFO 18360 --- [ecommerce] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-04T13:59:46.535+01:00  INFO 18360 --- [ecommerce] [main] c.e.ecommerce.EcommerceApplication       : Started EcommerceApplication in 1.648 seconds (process running for 1.943)
+2024-12-04T13:59:57.308+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-04T13:59:57.309+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-12-04T13:59:57.311+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-12-04T13:59:57.356+01:00  WARN 18360 --- [ecommerce] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'application/x-www-form-urlencoded;charset=UTF-8' is not supported]
+2024-12-04T14:09:59.511+01:00  WARN 18360 --- [ecommerce] [http-nio-8080-exec-3] com.example.ecommerce.CartService        : Failed cart update: no cart found with id 1
+2024-12-04T14:10:30.472+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-4] com.example.ecommerce.CartService        : Created cart 1
+2024-12-04T14:10:33.574+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-6] com.example.ecommerce.CartService        : Created cart 2
+2024-12-04T14:10:35.308+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-5] com.example.ecommerce.CartService        : Created cart 3
+2024-12-04T14:10:59.674+01:00 DEBUG 18360 --- [ecommerce] [http-nio-8080-exec-1] com.example.ecommerce.Cart               : Added product 1011
+2024-12-04T14:10:59.676+01:00 DEBUG 18360 --- [ecommerce] [http-nio-8080-exec-1] com.example.ecommerce.Cart               : Added product 1022
+2024-12-04T14:10:59.678+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-1] com.example.ecommerce.CartService        : Updated cart 1
+2024-12-04T14:11:24.763+01:00  WARN 18360 --- [ecommerce] [http-nio-8080-exec-2] com.example.ecommerce.CartService        : Failed cart update: no cart found with id 4
+2024-12-04T14:11:29.362+01:00 DEBUG 18360 --- [ecommerce] [http-nio-8080-exec-3] com.example.ecommerce.Cart               : Updated product 1011
+2024-12-04T14:11:29.362+01:00 DEBUG 18360 --- [ecommerce] [http-nio-8080-exec-3] com.example.ecommerce.Cart               : Updated product 1022
+2024-12-04T14:11:29.364+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-3] com.example.ecommerce.CartService        : Updated cart 1
+2024-12-04T14:12:53.535+01:00 DEBUG 18360 --- [ecommerce] [http-nio-8080-exec-8] com.example.ecommerce.Cart               : Added product 1011
+2024-12-04T14:12:53.536+01:00 DEBUG 18360 --- [ecommerce] [http-nio-8080-exec-8] com.example.ecommerce.Cart               : Added product 1022
+2024-12-04T14:12:53.538+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-8] com.example.ecommerce.CartService        : Updated cart 3
+2024-12-04T14:19:37.161+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-1] com.example.ecommerce.CartService        : Deleted cart 1
+2024-12-04T14:20:36.546+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CleanupTask        : Deleting inactive carts ...
+2024-12-04T14:20:36.549+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CartService        : Deleted cart 2
+2024-12-04T14:21:24.603+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-6] com.example.ecommerce.CartService        : Created cart 4
+2024-12-04T14:22:56.539+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CleanupTask        : Deleting inactive carts ...
+2024-12-04T14:22:56.540+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CartService        : Deleted cart 3
+2024-12-04T14:31:26.537+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CleanupTask        : Deleting inactive carts ...
+2024-12-04T14:31:26.537+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CartService        : Deleted cart 4
+2024-12-04T14:32:08.309+01:00  INFO 18360 --- [ecommerce] [http-nio-8080-exec-7] com.example.ecommerce.CartService        : Created cart 5
+2024-12-04T14:42:16.540+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CleanupTask        : Deleting inactive carts ...
+2024-12-04T14:42:16.541+01:00  INFO 18360 --- [ecommerce] [scheduling-1] com.example.ecommerce.CartService        : Deleted cart 5
